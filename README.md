@@ -9,12 +9,12 @@ The FPGA-based MCU is designed to execute RISC-V instructions stored in a ROM mo
 - **RISC-V CPU Core**
   - Supports 32-bit instructions
   - Interfaces with instruction memory (ROM)
-![Demo Image](Motion_detection_sobel_grayscale/demo/demo.png)
+![Demo Image](image/risc-v.png)
 
 - **APB Bus for Peripheral Communication**
   - Implements an APB master interface to control peripherals
   - Supports read and write operations
- ![Demo Image](Motion_detection_sobel_grayscale/demo/demo.png)
+ ![Demo Image](image/apb_master_interface.png)
 - **Peripheral Modules**
   - General Purpose Output (`GPOA`)
   - General Purpose Input (`GPIB`)
@@ -27,7 +27,7 @@ The FPGA-based MCU is designed to execute RISC-V instructions stored in a ROM mo
 
 ## System Architecture
 The project consists of the following key modules:
-![Demo Image](Motion_detection_sobel_grayscale/demo/demo.png)
+![Demo Image](image/architecture.png)
 ### 1. **RISC-V Core (`RV32I_Core`)**
    - Fetches instructions from `ROM`
    - Executes RISC-V instructions
@@ -54,7 +54,7 @@ Each peripheral connects to the APB bus and responds to CPU requests:
 | PWM        | `periph_pwm`    | Pulse-width modulation output |
 | DHT11      | `periph_dht11`  | Reads temperature & humidity |
 | HC-SR04    | `periph_hc_sr04` | Measures distance using ultrasonic sensor |
-
+![Demo Image](image/memory_map.png)
 ## Getting Started
 
 ### Prerequisites
